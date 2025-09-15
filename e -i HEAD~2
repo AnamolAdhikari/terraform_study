@@ -1,0 +1,35 @@
+[33mcommit a7a8a2ed2567c7ae78b1bc7fcacaf3460ed87452[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstudy_branch[m[33m)[m
+Author: m1racle <anamoladhikar1998@gmail.com>
+Date:   Mon Sep 15 15:03:05 2025 -0500
+
+    Added .gitignore for Terraform files
+
+[33mcommit cbf7321f547e4061e47106c203361a0ca2f97e46[m
+Author: m1racle <anamoladhikar1998@gmail.com>
+Date:   Mon Sep 15 15:00:08 2025 -0500
+
+    Grinding the course and updated the labs
+
+[33mcommit e871606ce3b0319b6b4755219887aa2a23904ff2[m[33m ([m[1;31morigin/study_branch[m[33m)[m
+Author: m1racle <anamoladhikar1998@gmail.com>
+Date:   Wed Sep 3 18:25:23 2025 -0500
+
+    Remove large files and update .gitignore
+
+[33mcommit a029c7023655ab8afce2f79a7fbfabffa100e3f1[m
+Author: m1racle <anamoladhikar1998@gmail.com>
+Date:   Wed Sep 3 16:39:41 2025 -0500
+
+    Added labs and studying for the exam along.
+
+[33mcommit 9179acf499fa5134aa79e2c1afd12535936b7f63[m
+Author: Anamol Adhikari <anamoladhikari1998@gmail.com>
+Date:   Mon May 12 12:20:03 2025 -0500
+
+    updated the readme file
+
+[33mcommit 5feafe271cdb2d888031d7e46bb29549d23f3b9e[m
+Author: Anamol Adhikari <61132572+AnamolAdhikari@users.noreply.github.com>
+Date:   Mon May 12 12:09:09 2025 -0500
+
+    Initial commit

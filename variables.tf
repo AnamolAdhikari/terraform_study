@@ -46,3 +46,9 @@ variable "variables_sub_auto_ip" {
   type        = bool
   default     = true
 }
+
+variable "environment" {
+  description = "The environment for the resources (e.g., dev, prod)"
+  type        = string
+  default     = "dev"
+}
