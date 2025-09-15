@@ -1,0 +1,1 @@
+aws_subnet.public_subnets["public_subnet_2"]

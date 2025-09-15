@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "1.13.1",
-  "serial": 135,
+  "serial": 77,
   "lineage": "2181a2ec-4713-0add-419e-5d42d784baa4",
   "outputs": {},
   "resources": [
@@ -170,50 +170,6 @@
     },
     {
       "mode": "managed",
-      "type": "aws_eip",
-      "name": "nat_gateway_eip",
-      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
-      "instances": [
-        {
-          "schema_version": 0,
-          "attributes": {
-            "address": null,
-            "allocation_id": "eipalloc-03979fe86c3f3a7c3",
-            "arn": "arn:aws:ec2:us-west-2:903118546588:elastic-ip/eipalloc-03979fe86c3f3a7c3",
-            "associate_with_private_ip": null,
-            "association_id": "eipassoc-0d0d6dd99cc63adeb",
-            "carrier_ip": "",
-            "customer_owned_ip": "",
-            "customer_owned_ipv4_pool": "",
-            "domain": "vpc",
-            "id": "eipalloc-03979fe86c3f3a7c3",
-            "instance": "",
-            "ipam_pool_id": null,
-            "network_border_group": "us-west-2",
-            "network_interface": "eni-0210f0fe14e0b6194",
-            "private_dns": "ip-10-0-21-172.us-west-2.compute.internal",
-            "private_ip": "10.0.21.172",
-            "ptr_record": "",
-            "public_dns": "ec2-52-26-37-177.us-west-2.compute.amazonaws.com",
-            "public_ip": "52.26.37.177",
-            "public_ipv4_pool": "amazon",
-            "region": "us-west-2",
-            "tags": {
-              "Name": "demo_nat_gateway_eip"
-            },
-            "tags_all": {
-              "Name": "demo_nat_gateway_eip"
-            },
-            "timeouts": null
-          },
-          "sensitive_attributes": [],
-          "identity_schema_version": 0,
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxODAwMDAwMDAwMDAsInJlYWQiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozMDAwMDAwMDAwMDB9fQ=="
-        }
-      ]
-    },
-    {
-      "mode": "managed",
       "type": "aws_instance",
       "name": "web_server",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
@@ -222,7 +178,7 @@
           "schema_version": 2,
           "attributes": {
             "ami": "ami-0a15226b1f7f23580",
-            "arn": "arn:aws:ec2:us-west-2:903118546588:instance/i-0abb6a5603dda1a1a",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:instance/i-05f5f3efc5816acc3",
             "associate_public_ip_address": true,
             "availability_zone": "us-west-2b",
             "capacity_reservation_specification": [
@@ -235,7 +191,7 @@
               {
                 "amd_sev_snp": "",
                 "core_count": 1,
-                "threads_per_core": 1
+                "threads_per_core": 2
               }
             ],
             "credit_specification": [
@@ -260,12 +216,12 @@
             "host_id": "",
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-0abb6a5603dda1a1a",
+            "id": "i-05f5f3efc5816acc3",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_lifecycle": "",
             "instance_market_options": [],
             "instance_state": "running",
-            "instance_type": "t2.micro",
+            "instance_type": "t3.micro",
             "ipv6_address_count": 0,
             "ipv6_addresses": [],
             "key_name": "",
@@ -294,11 +250,11 @@
             "primary_network_interface": [
               {
                 "delete_on_termination": true,
-                "network_interface_id": "eni-0ab34b51e98c1f50e"
+                "network_interface_id": "eni-0434d447dd90f404b"
               }
             ],
-            "primary_network_interface_id": "eni-0ab34b51e98c1f50e",
-            "private_dns": "ip-10-0-21-168.us-west-2.compute.internal",
+            "primary_network_interface_id": "eni-0434d447dd90f404b",
+            "private_dns": "ip-10-0-101-236.us-west-2.compute.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -306,9 +262,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "10.0.21.168",
+            "private_ip": "10.0.101.236",
             "public_dns": "",
-            "public_ip": "34.219.116.93",
+            "public_ip": "44.251.218.94",
             "region": "us-west-2",
             "root_block_device": [
               {
@@ -320,7 +276,7 @@
                 "tags": {},
                 "tags_all": {},
                 "throughput": 0,
-                "volume_id": "vol-067f2a659715d4d03",
+                "volume_id": "vol-0256db4571d9b4c86",
                 "volume_size": 8,
                 "volume_type": "gp2"
               }
@@ -329,7 +285,7 @@
             "security_groups": [],
             "source_dest_check": true,
             "spot_instance_request_id": "",
-            "subnet_id": "subnet-06a45d8efcf22fbcd",
+            "subnet_id": "subnet-08986d18e163621b2",
             "tags": {
               "Name": "Ubuntu EC2 Server"
             },
@@ -350,7 +306,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "i-0abb6a5603dda1a1a",
+            "id": "i-05f5f3efc5816acc3",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMCwicmVhZCI6OTAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMiJ9",
@@ -396,48 +352,6 @@
     },
     {
       "mode": "managed",
-      "type": "aws_nat_gateway",
-      "name": "nat_gateway",
-      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
-      "instances": [
-        {
-          "schema_version": 0,
-          "attributes": {
-            "allocation_id": "eipalloc-03979fe86c3f3a7c3",
-            "association_id": "eipassoc-0d0d6dd99cc63adeb",
-            "connectivity_type": "public",
-            "id": "nat-0c299501cf99fd87c",
-            "network_interface_id": "eni-0210f0fe14e0b6194",
-            "private_ip": "10.0.21.172",
-            "public_ip": "52.26.37.177",
-            "region": "us-west-2",
-            "secondary_allocation_ids": [],
-            "secondary_private_ip_address_count": 0,
-            "secondary_private_ip_addresses": [],
-            "subnet_id": "subnet-06a45d8efcf22fbcd",
-            "tags": {
-              "Name": "demo_nat_gateway"
-            },
-            "tags_all": {
-              "Name": "demo_nat_gateway"
-            },
-            "timeouts": null
-          },
-          "sensitive_attributes": [],
-          "identity_schema_version": 0,
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTgwMDAwMDAwMDAwMCwidXBkYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
-          "dependencies": [
-            "aws_eip.nat_gateway_eip",
-            "aws_internet_gateway.internet_gateway",
-            "aws_subnet.public_subnets",
-            "aws_vpc.vpc",
-            "data.aws_availability_zones.available"
-          ]
-        }
-      ]
-    },
-    {
-      "mode": "managed",
       "type": "aws_route_table",
       "name": "private_route_table",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
@@ -457,10 +371,10 @@
                 "core_network_arn": "",
                 "destination_prefix_list_id": "",
                 "egress_only_gateway_id": "",
-                "gateway_id": "",
+                "gateway_id": "igw-0807e6763c9503485",
                 "ipv6_cidr_block": "",
                 "local_gateway_id": "",
-                "nat_gateway_id": "nat-0c299501cf99fd87c",
+                "nat_gateway_id": "",
                 "network_interface_id": "",
                 "transit_gateway_id": "",
                 "vpc_endpoint_id": "",
@@ -487,12 +401,8 @@
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
           "dependencies": [
-            "aws_eip.nat_gateway_eip",
             "aws_internet_gateway.internet_gateway",
-            "aws_nat_gateway.nat_gateway",
-            "aws_subnet.public_subnets",
-            "aws_vpc.vpc",
-            "data.aws_availability_zones.available"
+            "aws_vpc.vpc"
           ]
         }
       ]
@@ -565,22 +475,19 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-044045ef9a0479df4",
+            "id": "rtbassoc-0d62092d1d5fc964e",
             "region": "us-west-2",
             "route_table_id": "rtb-0ac475b5c9d7b0ca2",
-            "subnet_id": "subnet-0dbd442cbdfce848d",
+            "subnet_id": "subnet-06828a8ef114ca914",
             "timeouts": null
           },
           "sensitive_attributes": [],
           "identity_schema_version": 0,
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
           "dependencies": [
-            "aws_eip.nat_gateway_eip",
             "aws_internet_gateway.internet_gateway",
-            "aws_nat_gateway.nat_gateway",
             "aws_route_table.private_route_table",
             "aws_subnet.private_subnets",
-            "aws_subnet.public_subnets",
             "aws_vpc.vpc",
             "data.aws_availability_zones.available"
           ]
@@ -590,22 +497,19 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-0e1f30a05512e4a7e",
+            "id": "rtbassoc-0fe93c8e278ee68bf",
             "region": "us-west-2",
             "route_table_id": "rtb-0ac475b5c9d7b0ca2",
-            "subnet_id": "subnet-00ce497b6dec5e4aa",
+            "subnet_id": "subnet-0b922e3644acf3a7b",
             "timeouts": null
           },
           "sensitive_attributes": [],
           "identity_schema_version": 0,
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
           "dependencies": [
-            "aws_eip.nat_gateway_eip",
             "aws_internet_gateway.internet_gateway",
-            "aws_nat_gateway.nat_gateway",
             "aws_route_table.private_route_table",
             "aws_subnet.private_subnets",
-            "aws_subnet.public_subnets",
             "aws_vpc.vpc",
             "data.aws_availability_zones.available"
           ]
@@ -615,22 +519,19 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-011e5a19fedf86dc3",
+            "id": "rtbassoc-0966e649f5ce0dba9",
             "region": "us-west-2",
             "route_table_id": "rtb-0ac475b5c9d7b0ca2",
-            "subnet_id": "subnet-042c0ebc68e94a951",
+            "subnet_id": "subnet-0acd13a79788f6c1f",
             "timeouts": null
           },
           "sensitive_attributes": [],
           "identity_schema_version": 0,
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
           "dependencies": [
-            "aws_eip.nat_gateway_eip",
             "aws_internet_gateway.internet_gateway",
-            "aws_nat_gateway.nat_gateway",
             "aws_route_table.private_route_table",
             "aws_subnet.private_subnets",
-            "aws_subnet.public_subnets",
             "aws_vpc.vpc",
             "data.aws_availability_zones.available"
           ]
@@ -648,10 +549,10 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-025eaea5ca134cf0e",
+            "id": "rtbassoc-0ae2a87f47ca971f4",
             "region": "us-west-2",
             "route_table_id": "rtb-02c9f358b129178cc",
-            "subnet_id": "subnet-06a45d8efcf22fbcd",
+            "subnet_id": "subnet-08986d18e163621b2",
             "timeouts": null
           },
           "sensitive_attributes": [],
@@ -670,10 +571,10 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-05f14ab5aae1aa977",
+            "id": "rtbassoc-031c48913102a50d9",
             "region": "us-west-2",
             "route_table_id": "rtb-02c9f358b129178cc",
-            "subnet_id": "subnet-0a3f2feb813e8a51d",
+            "subnet_id": "subnet-038ee10b22afa3e35",
             "timeouts": null
           },
           "sensitive_attributes": [],
@@ -692,10 +593,10 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-082c3e74e12384e00",
+            "id": "rtbassoc-09493f3e1c0b51f51",
             "region": "us-west-2",
             "route_table_id": "rtb-02c9f358b129178cc",
-            "subnet_id": "subnet-0aef201d5652b318e",
+            "subnet_id": "subnet-0c8452cb135df4747",
             "timeouts": null
           },
           "sensitive_attributes": [],
@@ -721,17 +622,17 @@
           "index_key": "private_subnet_1",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0dbd442cbdfce848d",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-06828a8ef114ca914",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2b",
             "availability_zone_id": "usw2-az1",
-            "cidr_block": "10.0.11.0/24",
+            "cidr_block": "10.0.1.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-0dbd442cbdfce848d",
+            "id": "subnet-06828a8ef114ca914",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -756,7 +657,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-0dbd442cbdfce848d",
+            "id": "subnet-06828a8ef114ca914",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -769,17 +670,17 @@
           "index_key": "private_subnet_2",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-00ce497b6dec5e4aa",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0b922e3644acf3a7b",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2c",
             "availability_zone_id": "usw2-az3",
-            "cidr_block": "10.0.12.0/24",
+            "cidr_block": "10.0.2.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-00ce497b6dec5e4aa",
+            "id": "subnet-0b922e3644acf3a7b",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -804,7 +705,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-00ce497b6dec5e4aa",
+            "id": "subnet-0b922e3644acf3a7b",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -817,17 +718,17 @@
           "index_key": "private_subnet_3",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-042c0ebc68e94a951",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0acd13a79788f6c1f",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2d",
             "availability_zone_id": "usw2-az4",
-            "cidr_block": "10.0.13.0/24",
+            "cidr_block": "10.0.3.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-042c0ebc68e94a951",
+            "id": "subnet-0acd13a79788f6c1f",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -852,7 +753,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-042c0ebc68e94a951",
+            "id": "subnet-0acd13a79788f6c1f",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -873,17 +774,17 @@
           "index_key": "public_subnet_1",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-06a45d8efcf22fbcd",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-08986d18e163621b2",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2b",
             "availability_zone_id": "usw2-az1",
-            "cidr_block": "10.0.21.0/24",
+            "cidr_block": "10.0.101.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-06a45d8efcf22fbcd",
+            "id": "subnet-08986d18e163621b2",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -908,7 +809,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-06a45d8efcf22fbcd",
+            "id": "subnet-08986d18e163621b2",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -921,17 +822,17 @@
           "index_key": "public_subnet_2",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0a3f2feb813e8a51d",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-038ee10b22afa3e35",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2c",
             "availability_zone_id": "usw2-az3",
-            "cidr_block": "10.0.22.0/24",
+            "cidr_block": "10.0.102.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-0a3f2feb813e8a51d",
+            "id": "subnet-038ee10b22afa3e35",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -956,7 +857,7 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-0a3f2feb813e8a51d",
+            "id": "subnet-038ee10b22afa3e35",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -969,17 +870,17 @@
           "index_key": "public_subnet_3",
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0aef201d5652b318e",
+            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-0c8452cb135df4747",
             "assign_ipv6_address_on_creation": false,
             "availability_zone": "us-west-2d",
             "availability_zone_id": "usw2-az4",
-            "cidr_block": "10.0.23.0/24",
+            "cidr_block": "10.0.103.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_lni_at_device_index": 0,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-0aef201d5652b318e",
+            "id": "subnet-0c8452cb135df4747",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -1004,67 +905,13 @@
           "identity_schema_version": 0,
           "identity": {
             "account_id": "903118546588",
-            "id": "subnet-0aef201d5652b318e",
+            "id": "subnet-0c8452cb135df4747",
             "region": "us-west-2"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
           "dependencies": [
             "aws_vpc.vpc",
             "data.aws_availability_zones.available"
-          ]
-        }
-      ]
-    },
-    {
-      "mode": "managed",
-      "type": "aws_subnet",
-      "name": "variables-subnet",
-      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
-      "instances": [
-        {
-          "schema_version": 1,
-          "attributes": {
-            "arn": "arn:aws:ec2:us-west-2:903118546588:subnet/subnet-05b12a98f19bb31b1",
-            "assign_ipv6_address_on_creation": false,
-            "availability_zone": "us-west-2a",
-            "availability_zone_id": "usw2-az2",
-            "cidr_block": "10.0.250.0/24",
-            "customer_owned_ipv4_pool": "",
-            "enable_dns64": false,
-            "enable_lni_at_device_index": 0,
-            "enable_resource_name_dns_a_record_on_launch": false,
-            "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-05b12a98f19bb31b1",
-            "ipv6_cidr_block": "",
-            "ipv6_cidr_block_association_id": "",
-            "ipv6_native": false,
-            "map_customer_owned_ip_on_launch": false,
-            "map_public_ip_on_launch": true,
-            "outpost_arn": "",
-            "owner_id": "903118546588",
-            "private_dns_hostname_type_on_launch": "ip-name",
-            "region": "us-west-2",
-            "tags": {
-              "Name": "sub-variables-us-west-2a",
-              "Terraform": "true"
-            },
-            "tags_all": {
-              "Name": "sub-variables-us-west-2a",
-              "Terraform": "true"
-            },
-            "timeouts": null,
-            "vpc_id": "vpc-00a2b631dd3de4835"
-          },
-          "sensitive_attributes": [],
-          "identity_schema_version": 0,
-          "identity": {
-            "account_id": "903118546588",
-            "id": "subnet-05b12a98f19bb31b1",
-            "region": "us-west-2"
-          },
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
-          "dependencies": [
-            "aws_vpc.vpc"
           ]
         }
       ]
